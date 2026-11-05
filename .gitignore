@@ -12,8 +12,6 @@ data/*
 
 # Outputs
 !results/.gitkeep
-*.pt
-*.ckpt
 wandb/
 lightning_logs/
 
