@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Data (never commit derm7pt)
+data/*
+!data/README.md
+
+# Outputs
+results/*
+!results/.gitkeep
+*.pt
+*.ckpt
+wandb/
+lightning_logs/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+*.swp
+
+# Poster build artefacts
+poster/*.aux
+poster/*.log
+poster/*.out
