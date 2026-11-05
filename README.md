@@ -13,7 +13,7 @@ criteria** (the concepts) and then from those concepts to one of **5 diagnostic 
 .
 ├── project4.ipynb    # all code: config, data, CBM, training regimes, evaluation, interventions
 ├── data/             # derm7pt goes here (git-ignored), see data/README.md
-├── docs/             # assignment text, use cases & success criteria
+├── docs/             # assignment text
 ├── poster/           # poster source + exported figures
 └── results/          # checkpoints, metrics, figures (git-ignored)
 ```
@@ -55,7 +55,7 @@ touched once per final model.
 - [ ] Support independent, sequential and joint training; document data allocation
 - [ ] Train all three regimes; standard performance assessment
 - [ ] Exploratory study of concept explanations + concept interventions
-- [ ] 3 use cases for model explanations with measurable success criteria → [`docs/use_cases.md`](docs/use_cases.md)
+- [ ] 3 use cases for model explanations with measurable success criteria → section 7 of the notebook
 
 ### Part 2 — TBA
 ### Part 3 — TBA
