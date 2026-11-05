@@ -24,6 +24,8 @@ lightning_logs/
 .DS_Store
 *.swp
 
+*.ipynb_checkpoints
+
 # Poster build artefacts
 poster/*.aux
 poster/*.log

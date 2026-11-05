@@ -11,19 +11,11 @@ criteria** (the concepts) and then from those concepts to one of **5 diagnostic 
 
 ```
 .
-├── cbm/                    # Python package: all model/training/eval code
-│   ├── data.py             # derm7pt loading, concept + label mapping, official splits
-│   ├── model.py            # x -> c (concept model), c -> y (label model), CBM wrapper
-│   ├── train.py            # independent / sequential / joint training (CLI entry point)
-│   ├── evaluate.py         # task + concept metrics on the test set
-│   └── intervene.py        # test-time concept interventions (as in the CBM paper)
-├── configs/default.yaml    # hyperparameters, paths, image modality, regime
-├── data/                   # derm7pt goes here (git-ignored), see data/README.md
-├── docs/                   # assignment text, use cases & success criteria, notes
-├── notebooks/              # exploratory analysis of concepts/explanations
-├── poster/                 # poster source + exported figures
-├── results/                # checkpoints, metrics, figures (git-ignored except .gitkeep)
-└── scripts/                # shell helpers (e.g. train all three regimes)
+├── project4.ipynb    # all code: config, data, CBM, training regimes, evaluation, interventions
+├── data/             # derm7pt goes here (git-ignored), see data/README.md
+├── docs/             # assignment text, use cases & success criteria
+├── poster/           # poster source + exported figures
+└── results/          # checkpoints, metrics, figures (git-ignored)
 ```
 
 ## Setup
@@ -31,26 +23,16 @@ criteria** (the concepts) and then from those concepts to one of **5 diagnostic 
 ```bash
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
+jupyter lab project4.ipynb
 ```
+
+All settings (paths, image type, training regime, hyperparameters) are in the `CONFIG` cell at
+the top of the notebook.
 
 > The project folder lives in OneDrive. Keep `.venv/`, `data/derm7pt/` and `results/` out of sync
 > if possible (they are git-ignored, but OneDrive will still try to upload them).
 
 Then download the dataset — see [`data/README.md`](data/README.md).
-
-## Usage
-
-```bash
-# train one regime
-python -m cbm.train --config configs/default.yaml --regime joint
-
-# train all three regimes (independent, sequential, joint)
-bash scripts/train_all.sh
-
-# evaluate + interventions
-python -m cbm.evaluate  --config configs/default.yaml --regime joint
-python -m cbm.intervene --config configs/default.yaml --regime joint
-```
 
 ## Training regimes (Koh et al., 2020)
 
