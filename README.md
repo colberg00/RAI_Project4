@@ -11,10 +11,9 @@ criteria** (the concepts) and then from those concepts to one of **5 diagnostic 
 
 ```
 .
-├── project4.ipynb    # all code: config, data, CBM, training regimes, evaluation, interventions
+├── *.ipynb           # all code (config, data, CBM, training, evaluation, interventions)
 ├── data/             # derm7pt goes here (git-ignored), see data/README.md
 ├── docs/             # assignment text
-├── poster/           # poster source + exported figures
 └── results/          # checkpoints, metrics, figures (git-ignored)
 ```
 
@@ -23,13 +22,12 @@ criteria** (the concepts) and then from those concepts to one of **5 diagnostic 
 ```bash
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-jupyter lab project4.ipynb
+jupyter lab
 ```
 
-All settings (paths, image type, training regime, hyperparameters) are in the `CONFIG` cell at
-the top of the notebook.
+All settings (paths, image type, training regime, hyperparameters) are set in the notebook.
 
-> The project folder lives in OneDrive. Keep `.venv/`, `data/derm7pt/` and `results/` out of sync
+> The project folder lives in OneDrive. Keep `.venv/`, `data/release_v0/` and `results/` out of sync
 > if possible (they are git-ignored, but OneDrive will still try to upload them).
 
 Then download the dataset — see [`data/README.md`](data/README.md).
@@ -55,7 +53,7 @@ touched once per final model.
 - [ ] Support independent, sequential and joint training; document data allocation
 - [ ] Train all three regimes; standard performance assessment
 - [ ] Exploratory study of concept explanations + concept interventions
-- [ ] 3 use cases for model explanations with measurable success criteria → section 7 of the notebook
+- [ ] 3 use cases for model explanations with measurable success criteria
 
 ### Part 2 — TBA
 ### Part 3 — TBA

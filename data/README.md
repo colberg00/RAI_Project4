@@ -6,7 +6,7 @@ The dataset is **not** committed (licence + size). Each group member downloads i
 2. Unzip so the layout is:
 
 ```
-data/derm7pt/
+data/release_v0/
 ├── images/            # clinical + dermoscopic images, in sub-folders
 └── meta/
     ├── meta.csv
@@ -15,13 +15,13 @@ data/derm7pt/
     └── test_indexes.csv
 ```
 
-If you place it elsewhere, change `CONFIG["data_root"]` in the notebook.
+If you place it elsewhere, update the data path in the notebook.
 
 ## What we use from `meta.csv`
 
-- `diagnosis` → grouped into 5 classes (BCC, NEV, MEL, MISC, SK), see the Data section of `project4.ipynb`.
+- `diagnosis` → grouped into 5 classes (BCC, NEV, MEL, MISC, SK).
 - 7-pt criteria → concepts: `pigment_network`, `streaks`, `pigmentation`,
   `regression_structures`, `dots_and_globules`, `blue_whitish_veil`, `vascular_structures`.
-- `derm` / `clinic` → image paths (dermoscopic / clinical photo); chosen by `CONFIG["image_type"]`.
+- `derm` / `clinic` → image paths (dermoscopic / clinical photo).
 
 Split sizes (official): 413 train / 203 val / 395 test cases.
